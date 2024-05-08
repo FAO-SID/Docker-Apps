@@ -1,5 +1,5 @@
 # Dockerized RStudio for GSP activities
-This repository included instructions and dockerfiles to build an image for a dockerized version of Rstudio.
+This repository includes instructions and dockerfiles to build a dockerized standard version of Rstudio for running scripts developped at GSP.
 This solves the difficulties found by many GSP partners regarding the installation of packages and running the code provided in GSP developments.
 
 Step 1: Install docker desktpp in you computer.
