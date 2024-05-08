@@ -15,7 +15,8 @@ The simplest way to get started is to pull the image directly from Docker Hub.
 3. **Type in the Terminal/Command Prompt** window the following command:
    ```bash
    docker pull luislado/rstudio_gsp:v1.0
-    The image will be downloaded from docker hub and installed in your computer
+
+The image will be downloaded from docker hub and installed in your computer
 
 4. **Run the container** typing in the Terminal/Command Prompt window:
    ```bash
