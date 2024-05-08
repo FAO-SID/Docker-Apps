@@ -17,7 +17,8 @@ The simplest way to get started is to pull the image directly from Docker Hub.
 ### Steps:
 1. **Install Docker Desktop** on your computer.
 2. **Download** the `docker-compose.yml` file into an empty folder.
-3. **Open a Terminal/Command Prompt** window and navigate to the folder containing the `docker-compose.yml` file.
+3. **Open a Terminal/Command Prompt** window and navigate to the folder containing the `docker-compose.yml` file:
+   
    ```bash
    cd my_empty_folder
 3. **Type in the Terminal/Command Prompt** window the following command:
