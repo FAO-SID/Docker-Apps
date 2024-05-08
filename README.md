@@ -2,7 +2,7 @@
 
 This repository provides instructions and Dockerfiles to build a Dockerized standard version of RStudio for running scripts developed at GSP. This setup aims to solve difficulties faced by many GSP partners when installing packages and running code from GSP developments.
 
-## Quick Start: Using Docker Hub
+## Quick Start: Using Image from Docker Hub
 
 The simplest way to get started is to pull the image directly from Docker Hub.
 
