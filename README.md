@@ -29,7 +29,7 @@ The image will be downloaded from docker hub and installed in your computer
     ```bash
     rstudio
 
-## Building Your Own Image
+## Building Your Own Docker Image
 
 Alternatively, you can build your own image using the files in the  *build_image* folder.
 
