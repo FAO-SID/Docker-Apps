@@ -24,10 +24,10 @@ The simplest way to get started is to pull the image directly from Docker Hub.
     ```bash
     localhost:8787
 
-6. **Enter Rstudio in your web browser**. User and password have been set to:
+6. **Enter Rstudio in your web browser**. `User` and `password` have been set to:
     ```bash
     rstudio
-     
+
 ## Building Your Own Image
 
 Alternatively, you can build your own image using the files in the  *build_image* folder.
