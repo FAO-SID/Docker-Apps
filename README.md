@@ -1,6 +1,14 @@
-# Dockerized RStudio for GSP Activities
+# Dockerized RStudio for GSP Training Activities
 
-This repository provides instructions and Dockerfiles to build a Dockerized standard version of RStudio for running scripts developed at GSP. This setup aims to solve difficulties faced by many GSP partners when installing packages and running code from GSP developments.
+Welcome to this repository, which offers a standardized Dockerized version of RStudio. This solution addresses common installation issues related to RStudio and its dependencies by providing a containerized environment that includes all necessary R packages. This approach ensures a consistent and conflict-free setup across different computing environments.
+
+The Dockerized RStudio we've developed aims to simplify the process of setting up a fully functional RStudio workspace, eliminating the variability and system conflicts often encountered with traditional installation methods. This makes it an ideal solution for users who need a reliable and quick setup to begin their data analysis without the hassle of configuring the software and resolving dependency issues.
+
+This solution has been tested to work effectively across various systems, demonstrating its robustness and adaptability. The repository is equipped with Dockerfiles and comprehensive instructions for building and running the Dockerized RStudio, making it accessible for both beginners and advanced users. The configuration is designed to be flexible, allowing easy updates and additions to the package list through simple modifications of the Dockerfile.
+
+For those new to Docker or containerization, this repository can serve as an excellent starting point for learning how to deploy and manage containerized applications. Additionally, this setup promotes better management of resources in environments where multiple users need access to a standardized analytical toolset.
+
+Explore the documentation to get started with deploying your Dockerized RStudio environment and take advantage of a streamlined setup process that keeps your system clean and your software portable.
 
 ## Quick Start: Using Image from Docker Hub
 
