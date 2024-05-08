@@ -12,7 +12,7 @@ Explore the documentation to get started with deploying your Dockerized RStudio 
 
 ## Quick Start: Using Image from Docker Hub
 
-The simplest way to get started is to pull the image directly from Docker Hub.
+The simplest way to get started is to pull the Docker image directly from Docker Hub.
 
 ### Steps:
 1. **Install Docker Desktop** on your computer.
