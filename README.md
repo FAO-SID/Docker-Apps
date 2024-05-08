@@ -31,7 +31,7 @@ in your web browser. The Rstudio GUI appears. User and password have been set to
     
 ## Building Your Own Image
 
-Alternatively, you can build your own image using the files in the build_image directory.
+Alternatively, you can build your own image using the files in the  *build_image* folder.
 
 ### Steps:
 1. **Install Docker Desktop** on your computer.
