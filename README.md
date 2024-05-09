@@ -30,7 +30,7 @@ The image will be downloaded from Docker Hub and installed in your computer
 4. **Run the container** typing in the Terminal/Command Prompt window:
    ```bash
    docker-compose up -d
-A new folder named `rstudio-data` will appear in the installation folder. This will be the default root working directory, and RStudio will only access files within this directory. 
+A new folder named `rstudio-data` will appear in the installation folder. This will be the default RStudio working directory, andn it will only access files within this directory. 
 
 5. **Enter Rstudio** typing:
     ```bash
@@ -56,7 +56,7 @@ Alternatively, you can build your own image using the files in the  *build_image
     ```bash
     docker-compose up --build
 
-The installation will take about 45 minutes to complete from scratch. After installation, a new folder named `rstudio-data` will appear in the cloned folder. This will be the default root working directory, and RStudio will only access files within this directory.
+The installation will take about 45 minutes to complete from scratch. After installation, a new folder named `rstudio-data` will appear in the cloned folder. This will be the default RStudio working directory, andn it will only access files within this directory. 
 Access RStudio: Open a web browser and go to:
    
 5.
