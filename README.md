@@ -1,14 +1,19 @@
-# Standardized RStudio for FAO-GSP Training Activities
+# Standardized Software Solutions for FAO-GSP Training Activities
 
-Welcome to this repository, which offers a standardized Dockerized version of RStudio adapted to the requirements of FAO-GSP training activities. This solution addresses common installation issues related to RStudio and its dependencies by providing a containerized environment that includes all necessary R packages to run the R scripts implemented at GSP. This approach ensures a consistent and conflict-free setup across different computing environments.
+Welcome to this repository, offering standardized, Dockerized solutions for FAO-GSP training activities. These solutions address common software installation challenges and library dependency issues by providing a consistent, containerized environment with all necessary software requirements. This ensures a uniform and conflict-free setup across various computing environments.
 
-The Dockerized RStudio we've developed aims to simplify the process of setting up a fully functional RStudio workspace, eliminating the variability and system conflicts often encountered with traditional installation methods. This makes it an ideal solution for users who need a reliable and quick setup to begin their data analysis without the hassle of configuring the software and resolving dependency issues.
+The Dockerized setup simplifies creating a fully functional workspace, eliminating system variability and conflicts often encountered with traditional installation methods. It provides a quick, reliable solution for data analysis without the hassle of software configuration and dependency resolution.
 
-This solution has been tested to work effectively across various systems, demonstrating its robustness and adaptability. The repository is equipped with Dockerfiles and comprehensive instructions for building and running the Dockerized RStudio, making it accessible for both beginners and advanced users. The configuration is designed to be flexible, allowing easy updates and additions to the package list through simple modifications of the Dockerfile.
+## Features and Benefits
+- **Robust and Adaptable:** Tested across different systems, the images demonstrate robustness and adaptability. Dockerfiles and detailed instructions are included to ensure seamless building and execution of software applications.
+- **Flexible:** Easily update or extend the package list via simple Docker Hub image modifications.
+- **Resource Management:** Ideal for environments where multiple users require access to a standardized analytical toolset without conflicts.
 
-For those new to Docker or containerization, this repository can serve as an excellent starting point for learning how to deploy and manage containerized applications. Additionally, this setup promotes better management of resources in environments where multiple users need access to a standardized analytical toolset.
+For beginners or those new to Docker, this repository serves as a valuable introduction to deploying and managing containerized applications. It promotes efficient resource management for environments needing standardized analytical tools.
 
-Explore the documentation to get started with deploying your Dockerized RStudio environment and take advantage of a streamlined setup process that keeps your system clean and your software portable.
+## Current Implementations
+- **Dockerized RStudio:** Includes complete Rstudio installation with all required R packages for mapping training activities at GSP.
+- **Multi-Container Environment PostgreSQL/PostGIS + Shiny:** Combines a PostgreSQL/PostGIS database server with a Shiny web application to build standardized national soil databases according to ISO-28258. These services share a network and have established dependencies.
 
 ## Quick Start: Using Image from Docker Hub
 
