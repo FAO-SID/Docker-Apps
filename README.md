@@ -23,20 +23,14 @@ The simplest way to get started is to pull the Docker image directly from Docker
    cd my_empty_folder
 3. **Type in the Terminal/Command Prompt** window the following command:
    ```bash
-   docker pull luislado/rstudio_gsp:v1.0
-
-The image will be downloaded from Docker Hub and installed in your computer
-
-4. **Run the container** typing in the Terminal/Command Prompt window:
-   ```bash
    docker-compose up -d
 A new folder named `rstudio-data` will appear in the installation folder. This will be the default RStudio working directory, and it will only access files within this directory. 
 
-5. **Enter Rstudio** typing:
+4. **Enter Rstudio** typing:
     ```bash
     localhost:8787
 
-6. **Enter Rstudio in your web browser**. `User` and `password` have been set to:
+5. **Enter Rstudio in your web browser**. `User` and `password` have been set to:
     ```bash
     rstudio
 
