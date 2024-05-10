@@ -1,4 +1,4 @@
-# Shiny Application to create PostgreSQL National Soil Databases following the recommentations in the ISO-28258 data model
+# Shiny Application to create and populate PostgreSQL National Soil Databases following the recommentations in the ISO-28258 data model
 
 This repository provides Dockerized software solutions adapted to FAO-GSP activities, focusing on the creation of PostgreSQL National Soil Databases adhering to the ISO-28258 data model. The containerized solution is designed to overcome common installation challenges associated with Postgres, R, Shiny and its dependencies, offering a reliable and consistent setup across different computing environments.
 
