@@ -1,6 +1,6 @@
-# Standardized Software Solutions for FAO-GSP Training Activities
+# Standardized Software Solutions for FAO-GSP Activities
 
-Welcome to this repository, offering standardized, Dockerized solutions for FAO-GSP training activities. These solutions address common software installation challenges and library dependency issues by providing a consistent, containerized environment with all necessary software requirements. This ensures a uniform and conflict-free setup across various computing environments.
+Welcome to this repository, offering standardized, Dockerized solutions for FAO-GSP activities. These solutions address common software installation challenges and library dependency issues by providing a consistent, containerized environment with all necessary software requirements. This ensures a uniform and conflict-free setup across various computing environments.
 
 The Dockerized setup simplifies creating a fully functional workspace, eliminating system variability and conflicts often encountered with traditional installation methods. It provides a quick, reliable solution for data analysis without the hassle of software configuration and dependency resolution.
 
