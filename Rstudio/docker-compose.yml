@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  rstudio:
+    image: luislado/rstudio_gsp:v1.0
+    container_name: rstudio_gsp
+    ports:
+      - "8787:8787"  # Map TCP port 8787 in the container to port 8787 on the Docker host
+    environment:
+      - PASSWORD=rstudio  # Set a secure password here
+      - ROOT=TRUE  # Optionally set this to TRUE to allow RStudio to access the root user
+    volumes:
+      - ./rstudio-data:/home/rstudio  # Maps RStudio user directory to a named volume
+
+volumes:
+  rstudio-data:
