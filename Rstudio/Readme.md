@@ -1,6 +1,6 @@
 # Standardized RStudio for FAO-GSP Training Activities
 
-Welcome to this repository, which offers a standardized Dockerized version of RStudio adapted to the requirements of FAO-GSP training activities. This solution addresses common installation issues related to RStudio and its dependencies by providing a containerized environment that includes all necessary R packages to run the R scripts implemented at GSP. This approach ensures a consistent and conflict-free setup across different computing environments.
+This repository offers a standardized Dockerized version of RStudio adapted to the requirements of FAO-GSP training activities. This solution addresses common installation issues related to RStudio and its dependencies by providing a containerized environment that includes all necessary R packages to run the R scripts implemented at GSP. This approach ensures a consistent and conflict-free setup across different computing environments.
 
 The Dockerized RStudio we've developed aims to simplify the process of setting up a fully functional RStudio workspace, eliminating the variability and system conflicts often encountered with traditional installation methods. This makes it an ideal solution for users who need a reliable and quick setup to begin their data analysis without the hassle of configuring the software and resolving dependency issues.
 
