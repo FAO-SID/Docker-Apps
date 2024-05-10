@@ -29,14 +29,5 @@ The simplest way to get started is to pull the Docker image directly from Docker
 3. **Type in the Terminal/Command Prompt** window the following command:
    ```bash
    docker-compose up -d
-A new folder named `rstudio-data` will appear in the installation folder. This will be the default RStudio working directory, and it will only access files within this directory. 
 
-4. **Enter Rstudio** typing:
-    ```bash
-    localhost:8787
-
-5. **Enter Rstudio in your web browser**. `User` and `password` have been set to:
-    ```bash
-    rstudio
-
-
+More details about accessing the applications are provided in the specific installation folders.
