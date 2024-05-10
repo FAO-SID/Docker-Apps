@@ -1,39 +1,39 @@
-# Shiny Applicatin to create postgresql National Soil Databases following the recommentations in ISO-28258 data model
+# Shiny Application to create PostgreSQL National Soil Databases following the recommentations in the ISO-28258 data model
 
-This repository, which offers a standardized Dockerized version of RStudio adapted to the requirements of FAO-GSP training activities. This solution addresses common installation issues related to RStudio and its dependencies by providing a containerized environment that includes all necessary R packages to run the R scripts implemented at GSP. This approach ensures a consistent and conflict-free setup across different computing environments.
+This repository provides Dockerized software solutions adapted to FAO-GSP activities, focusing on the creation of PostgreSQL National Soil Databases adhering to the ISO-28258 data model. The containerized solution is designed to overcome common installation challenges associated with Postgres, R, Shiny and its dependencies, offering a reliable and consistent setup across different computing environments.
 
-The Dockerized RStudio we've developed aims to simplify the process of setting up a fully functional RStudio workspace, eliminating the variability and system conflicts often encountered with traditional installation methods. This makes it an ideal solution for users who need a reliable and quick setup to begin their data analysis without the hassle of configuring the software and resolving dependency issues.
+## Features
+- Standardized Environment: The Dockerized applications simplifies the process of establishing a fully functional workspaces by removing system variability and conflicts typical with traditional installations.
+- Ready-to-Use: Equipped with all necessary R packages to implement Soil Standard Databases, this setup is tested across various systems, proving its robustness and adaptability.
+- User-Friendly: Comprehensive instructions are provided for building and running the Dockerized application, making it accessible for both novice and advanced users. The Docker configuration allows for easy updates and package additions.
+- Resource Management: Ideal for environments requiring multiple users to access a standardized analytical toolset without resource conflicts.
 
-This solution has been tested to work effectively across various systems, demonstrating its robustness and adaptability. The repository is equipped with Dockerfiles and comprehensive instructions for building and running the Dockerized RStudio, making it accessible for both beginners and advanced users. The configuration is designed to be flexible, allowing easy updates and additions to the package list through simple modifications of the Dockerfile.
+## Architecture
+The configuration deploys two Docker containers:
 
-For those new to Docker or containerization, this repository can serve as an excellent starting point for learning how to deploy and manage containerized applications. Additionally, this setup promotes better management of resources in environments where multiple users need access to a standardized analytical toolset.
+- PostgreSQL: Manages soil data in accordance with the ISO-28258 standard. Data is stored locally in the /data/postgis directory.
+- Shiny Application: Provides a frontend interface for importing soil data from common 'xlsx' files to PostgreSQL. It also includes an 'r-scripts' folder that serves as the root path for the Shiny server.
 
-Explore the documentation to get started with deploying your Dockerized RStudio environment and take advantage of a streamlined setup process that keeps your system clean and your software portable.
+Explore the documentation to deploy your Dockerized environment and streamline your setup process, ensuring a clean system and portable software.
+
 
 ## Quick Start: Using Image from Docker Hub
 
-The simplest way to get started is to pull the Docker image directly from Docker Hub.
+The simplest way to get started is to pull the Docker images directly from Docker Hub.
 
 ### Steps:
 1. **Install Docker Desktop** on your computer.
 2. **Download** the `docker-compose.yml` file into an empty folder.
-3. **Open a Terminal/Command Prompt** window and navigate to the folder containing the `docker-compose.yml` file:   
+3. **Navigate** to the folder with the 'docker-compose.yml' file using a Terminal/Command Prompt:   
    ```bash
-   cd my_empty_folder
-3. **Type in the Terminal/Command Prompt** window the following command:
+   cd your_empty_folder
+3. **Launch the containers** with the following command:
    ```bash
    docker-compose up -d
 
-The 'yml' file creates two independent Docker images which containerize both PostgreSQL and Shiny. The containers are connected in a common network thus, it is possible the transfer of data between them. 
+The 'yml' file install two Docker images in the system, which containerize both 'PostgreSQL' and 'Shiny'. The containers are connected in a common network thus, it is possible the transfer of data between them. 
 
-The PostgreSQL container is used to store and distribute soil standardized data according to ISO-28258 data model, which be stored locally in a new folder named `/data/postgis` in the mounting folder.
-
-The Shiny Application consist in a Frontend to allow the easy exchange of soil data from common 'xlsx' files to the PosgreSQL following the requirements imposed in ISO-28258 data model. The Application do not require to store any specific data but it also provides a folder  named `r-scripts` which serve as a root path to Shiny.
-
-4. **Enter Shiny in your web browser**: You can enter the Shiny application from your web browser just typing:
+4. **Access the Shiny Application**: Open your web browser and enter:
     ```bash
     localhost:3838
 
-5. **Enter Rstudio in your web browser**. `User` and `password` have been set to:
-    ```bash
-    rstudio
