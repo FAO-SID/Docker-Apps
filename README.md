@@ -21,12 +21,11 @@ The simplest way to get started is to pull the Docker image directly from Docker
 
 ### Steps:
 1. **Install Docker Desktop** on your computer.
-2. **Download** the `docker-compose.yml` file into an empty folder.
-3. **Open a Terminal/Command Prompt** window and navigate to the folder containing the `docker-compose.yml` file:
-   
+2. **Clone this repository** to your computer and unzip it.
+3. **Open a Terminal/Command Prompt** window and navigate to the unzipped folder (in this example 'my_folder') and to the folder with the application you want to install.
    ```bash
-   cd my_empty_folder
-3. **Type in the Terminal/Command Prompt** window the following command:
+   cd my_folder/GLOSIS ISO 28258/
+4. **Type in the Terminal/Command Prompt** window the following command:
    ```bash
    docker-compose up -d
 
