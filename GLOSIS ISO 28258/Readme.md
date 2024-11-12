@@ -32,7 +32,6 @@ The simplest way to get started is to pull the Docker images directly from Docke
    docker-compose up -d
 The 'yml' file will install two Docker images in the system, which containerize both 'PostgreSQL' and 'Shiny'. The containers are connected in a common network thus, it is possible the transfer of data between them. 
 4. **Access the Shiny Application**: Open your web browser and enter:
-
-    ```bash
-    localhost:3838
+   ```bash
+   localhost:3838
 
