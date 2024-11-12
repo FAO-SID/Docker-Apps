@@ -23,18 +23,14 @@ The simplest way to get started is to pull the Docker images directly from Docke
 
 ### Steps:
 1. **Install Docker Desktop** on your computer.
-2. **Download** the `docker-compose.yml` file into an empty folder.
-3. **Navigate** to the folder with the 'docker-compose.yml' file using a Terminal/Command Prompt:   
+2. **Clone this repository** to your computer and unzip it into an empty folder (example 'my_folder').
+3. **Open a Terminal/Command Prompt** window and navigate to the unzipped folder and into the folder with the application containing the ISO 28258 database manager.
    ```bash
-   cd your_empty_folder
-3. **Launch the containers** with the following command:
+   cd my_folder/GLOSIS ISO 28258/
+4. **Type in the Terminal/Command Prompt** window the following command:
    ```bash
    docker-compose up -d
-
-The 'yml' file install two Docker images in the system, which containerize both 'PostgreSQL' and 'Shiny'. The containers are connected in a common network thus, it is possible the transfer of data between them. 
-
-4. **Unzip the files** in Archives.zip into the r-scripts folder what you will find now within the installation folder
-
+The 'yml' file will install two Docker images in the system, which containerize both 'PostgreSQL' and 'Shiny'. The containers are connected in a common network thus, it is possible the transfer of data between them. 
 4. **Access the Shiny Application**: Open your web browser and enter:
     ```bash
     localhost:3838
