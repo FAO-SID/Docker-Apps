@@ -6,20 +6,20 @@ services:
     restart: always
     environment:
       POSTGRES_DB: postgres
-      POSTGRES_USER: gsp
-      POSTGRES_PASSWORD: "gsp"
+      POSTGRES_USER: glosis
+      POSTGRES_PASSWORD: "glosis"
     ports:
       - "5432:5432"
     volumes:
       - ./data/postgis:/var/lib/postgresql/data
       - ./init-scripts:/docker-entrypoint-initdb.d
     networks:
-      - carsis-net
+      - glosis-net
 
   shinyapp:
     build:
-      context: ./shiny
-      dockerfile: Dockerfile
+      context: ./
+      dockerfile: ./shiny/Dockerfile
     restart: always
     environment:
       - USER=shiny
@@ -31,7 +31,7 @@ services:
     depends_on:
       - postgis
     networks:
-      - carsis-net
+      - glosis-net
 
 networks:
-  carsis-net:
+  glosis-net:
