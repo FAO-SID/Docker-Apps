@@ -22,9 +22,6 @@ RUN R -e "install.packages(c('shinythemes','tidyr', 'terra','sf','raster','stars
 # Copy the Shiny apps from the host
 ADD ./r-scripts/ /srv/shiny-server/
 
-# Copy the Shiny server configuration file into the container
-COPY shiny-server.conf /etc/shiny-server/
-
 EXPOSE 3838
 
 CMD ["shiny-server"]
