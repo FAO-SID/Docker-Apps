@@ -364,8 +364,7 @@ server <- function(input, output, session) {
                    style = "display: block; margin: 0 auto; text-align: center;")
     }
   })
-  
-  
+
   observeEvent(input$fileUpload, {
     
     # Read the uploaded file
@@ -405,36 +404,44 @@ server <- function(input, output, session) {
     output$viewLocation <- renderDataTables("location")
     output$viewPSL <- renderDataTables("project_site_location")
     output$viewSpecimen <- renderDataTables("specimen")
-    
-    # Dynamically create the render button after file is uploaded
-    # output$renderButton <- renderUI({
-    #   if (!is.null(dbCon())) {
-    #     actionButton("dashboard", "Create Dashboard", 
-    #                  style = "display: block; margin: 0 auto; text-align: center;")
-    #   }
-    # })
-    
-    
+
   })
   
+
   # Render Dashboard ----
   observeEvent(input$dashboard, {
-    #req(input$fileUpload) # if you want to trigger the action  only if updated file
+    # req(input$fileUpload) # if you want to trigger the action only if updated file
+    
     # Show modal right before rendering
     showModal(modalDialog(
       title = "Rendering Dashboard",
       "Please wait...",
       footer = NULL
     ))
+    
     # Render the R Markdown document
-    output_path <- paste0("../maps/",isolate(input$db_name_input),".html")
+    output_path <- paste0("../maps/", isolate(input$db_name_input), ".html")
     rmarkdown::render("dashboard.Rmd", output_file = output_path)
+    
     # After rendering, remove the modal
     removeModal()
+    
     # Notify the user it's ready
     shiny::showNotification("Dashboard rendered successfully!", type = "message")
     # Open the rendered HTML file in the default web browser
-    browseURL(output_path)
+    #browseURL(output_path)
+    # Provide a link to open the rendered HTML file within the Shiny app
+    # Dynamically create the render button after file is uploaded
+    output$dashboard_link <- renderUI({
+      # Ensure the link points to the latest file path
+      req(dbCon()) # Ensure there's a connection
+      req(input$dashboard)
+      tags$a(
+        href = output_path, 
+        target = "_blank",
+        actionButton("dashboard_link", "Go to Dashboard", icon = icon("play-circle"),
+                     style = "display: block; margin: 0 auto; text-align: center;color: green;")
+      )
+    })
   })
-  
 }
