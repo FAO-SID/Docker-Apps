@@ -420,7 +420,7 @@ server <- function(input, output, session) {
     ))
     
     # Render the R Markdown document
-    output_path <- paste0("../maps/", isolate(input$db_name_input), ".html")
+    output_path <- paste0("../dashboards/", isolate(input$db_name_input), ".html")
     rmarkdown::render("dashboard.Rmd", output_file = output_path)
     
     # After rendering, remove the modal
