@@ -24,6 +24,9 @@ ui <- fluidPage(
       actionButton("btnToggleConn", "Connect", icon = icon("plug"), width = '85%'),
       uiOutput("dynamicFileInput"), # Dynamic UI for fileInput
       uiOutput("renderButton"), # Dynamic UI for render dashboard
+      tags$br(),
+      uiOutput("dashboard_link"), # Link to the rendered Dashboard
+      
       # New line with the label
       tags$br(),
       tags$div(style = "padding: 10px 15px; font-weight: bold;", "CREATE A DATABASE"),
