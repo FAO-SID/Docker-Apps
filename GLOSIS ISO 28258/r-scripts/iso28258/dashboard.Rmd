@@ -16,7 +16,6 @@ lapply(c("shiny","flexdashboard","rpostgis","DBI","RPostgres","DT","crosstalk","
 
 ```{r postgres, include=FALSE}
 # Database connection setup
-#dbname <- "dede"
 dbname <- isolate(input$db_name_input)
 con <- dbConnect(RPostgres::Postgres(), dbname = dbname, host = host_name, port = port_number, user = user_name, password = password_name)
 
