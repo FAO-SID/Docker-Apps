@@ -242,8 +242,8 @@ server <- function(input, output, session) {
   observeEvent(input$fileUpload, {
     req(input$fileUpload)
     tryCatch({
-      uploaded_df.site <- read_excel(input$fileUpload$datapath, sheet = "Site Data")
-      uploaded_df.hor <- read_excel(input$fileUpload$datapath, sheet = "Horizon Data")
+      uploaded_df.site <- read_excel(input$fileUpload$datapath, sheet = "Plot Data")
+      uploaded_df.hor <- read_excel(input$fileUpload$datapath, sheet = "profileElement Data")
       uploaded_df.procedure <- read_excel(input$fileUpload$datapath, sheet = "Procedures") %>%
         left_join(procedures, by="label")
       
@@ -368,8 +368,8 @@ server <- function(input, output, session) {
   observeEvent(input$fileUpload, {
     
     # Read the uploaded file
-    uploaded_df.site <- read_excel(input$fileUpload$datapath, sheet = "Site Data")
-    uploaded_df.hor <- read_excel(input$fileUpload$datapath, sheet = "Horizon Data")
+    uploaded_df.site <- read_excel(input$fileUpload$datapath, sheet = "Plot Data")
+    uploaded_df.hor <- read_excel(input$fileUpload$datapath, sheet = "profileElement Data")
     uploaded_df.procedure <- read_excel(input$fileUpload$datapath, sheet = "Procedures") %>%
       left_join(procedures, by="label")
     
