@@ -1,0 +1,45 @@
+services:
+  postgis:
+    image: luislado/glosis-postgis:latest  # Use your uploaded image
+    container_name: glosis_db
+    restart: always
+    environment:
+      DB_HOST: postgis
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: glosis
+      POSTGRES_PASSWORD: glosis
+    ports:
+      - "5442:5432"
+    volumes:
+      - ./data/postgis:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - glosis-net
+
+  shinyapp:
+    image: luislado/glosis-shiny:latest  # Use your uploaded image
+    container_name: glosis-shiny
+    restart: always
+    environment:
+      USER: shiny
+      PASSWORD: shiny
+      DB_HOST: postgis
+      DB_PORT: 5442
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: glosis
+    ports:
+      - "3838:3838"
+    volumes:
+      - ./init-scripts:/srv/shiny-server/init-scripts
+    depends_on:
+      - postgis
+    networks:
+      - glosis-net
+
+networks:
+  glosis-net:
+    driver: bridge
+    name: glosis-net
