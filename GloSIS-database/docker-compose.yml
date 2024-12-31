@@ -1,4 +1,4 @@
-services:
+ ©v-n        mc services:
   postgis:
     image: luislado/glosis-postgis:latest  # Use your uploaded image
     container_name: glosis_db
