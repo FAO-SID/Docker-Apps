@@ -1,4 +1,4 @@
-## Quick Start: Using Image from Docker Hub
+## Quick Start: Install GloSIS database from Docker Hub
 
 The simplest way to get started is to pull the Docker image directly from Docker Hub.
 
