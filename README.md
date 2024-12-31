@@ -1,6 +1,6 @@
-# Standardized Software Solutions for GSP-SID Activities
+# Standardized Software Solutions for GloSIS
 
-Welcome to this repository, offering standardized, Dockerized solutions for GSP-SID activities. These solutions address common software installation challenges and library dependency issues by providing a consistent, containerized environment with all necessary software requirements. This ensures a uniform and conflict-free setup across various computing environments.
+Welcome to this repository, offering standardized, Dockerized solutions for GloSIS activities. These solutions address common software installation challenges and library dependency issues by providing a consistent, containerized environment with all necessary software requirements. This ensures a uniform and conflict-free setup across various computing environments.
 
 The Dockerized setup simplifies creating a fully functional workspace, eliminating system variability and conflicts often encountered with traditional installation methods. It provides a quick, reliable solution for data analysis without the hassle of software configuration and dependency resolution.
 
@@ -15,18 +15,3 @@ For beginners or those new to Docker, this repository serves as a valuable intro
 - **Dockerized RStudio:** Includes complete Rstudio installation with all required R packages for mapping training activities at FAO-SID.
 - **Multi-Container Environment PostgreSQL/PostGIS + Shiny:** Combines a PostgreSQL/PostGIS database server with a Shiny web application to build standardized national soil databases according to ISO-28258. These services share a network and have established dependencies.
 
-## Quick Start: Using Image from Docker Hub
-
-The simplest way to get started is to pull the Docker image directly from Docker Hub.
-
-### Steps:
-1. **Install Docker Desktop** on your computer.
-2. **Clone this repository** to your computer and unzip it.
-3. **Open a Terminal/Command Prompt** window and navigate to the unzipped folder (in this example is stored in the 'Desktop' folder) and to the folder with the application you want to install.
-   ```bash
-   cd Desktop/GloSIS-database/
-4. **Type in the Terminal/Command Prompt** window the following command:
-   ```bash
-   docker-compose up --build -d
-
-More details about accessing the applications are provided in the specific installation folders.
