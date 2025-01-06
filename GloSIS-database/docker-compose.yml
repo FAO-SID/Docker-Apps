@@ -1,6 +1,6 @@
 services:
   postgis:
-    image: luislado/glosis-postgis:latest  # Use your uploaded image
+    image: luislado/glosis-postgis:latest
     container_name: glosis-db
     restart: always
     environment:
@@ -19,7 +19,7 @@ services:
       - glosis-net
 
   shinyapp:
-    image: luislado/glosis-shiny:latest  # Use your uploaded image
+    image: luislado/glosis-shiny:latest
     container_name: glosis-shiny
     restart: always
     environment:
