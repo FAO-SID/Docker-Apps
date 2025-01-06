@@ -1,0 +1,36 @@
+MAP
+  NAME "GSOC"
+  EXTENT -60 -180 85 180
+  UNITS DD
+  SHAPEPATH "./"
+  SIZE 800 600
+  IMAGETYPE "PNG24"
+  PROJECTION
+      "init=epsg:4326"
+  END # PROJECTION
+  WEB
+      METADATA
+        "ows_title" "GSOC web-service"
+        "wms_title" "GSOC web-service"
+        "ows_enable_request" "*"
+        "ows_srs" "EPSG:4326 EPSG:4326 EPSG:3857"
+        "ows_getfeatureinfo_formatlist" "text/plain,text/html,application/json,geojson,application/vnd.ogc.gml,gml"
+        "wms_feature_info_mime_type" "text/plain,text/html"
+      END # METADATA
+  END # WEB
+  LAYER
+      TEMPLATE "getfeatureinfo.tmpl"
+      NAME "GSOC"
+      DATA "GSOC.tif"
+      TYPE RASTER
+      STATUS ON
+      CLASS
+        NAME "Organic Carbon"
+        STYLE
+            COLORRANGE 0 128 255 139 69 19  # Start and end colors (blue to brown)
+            DATARANGE 0 750
+            RANGEITEM "pixel"
+          END # STYLE
+      END # CLASS
+  END # LAYER
+END # MAP

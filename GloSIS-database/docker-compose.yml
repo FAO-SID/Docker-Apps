@@ -39,6 +39,19 @@ services:
     networks:
       - glosis-net
 
+  mapserver:
+    image: camptocamp/mapserver
+    container_name: glosis-ws
+    restart: always
+    ports:
+      - "8082:80"
+    volumes:
+      - ./data/mapserver:/etc/mapserver:ro
+    depends_on:
+      - postgis
+    networks:
+      - glosis-net
+
 networks:
   glosis-net:
     driver: bridge
