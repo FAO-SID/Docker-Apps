@@ -1,0 +1,67 @@
+REM  *****  BASIC  *****
+
+Sub Glosis_Template
+    Dim oSheets as Object
+    Dim oSheet1 as Object, oSheet2 as Object
+    Dim oCell as Object
+    Dim i as Integer, j as Integer, n as Integer, elementCounter as Integer
+    Dim currentProfileCode as String
+    
+    oSheets = ThisComponent.Sheets
+    oSheet1 = oSheets.getByName("Plot Data")
+    
+    ' Create a new sheet named "ProfileCodes" if it does not exist
+    If NOT oSheets.hasByName("Element Data") Then
+        oSheets.insertNewByName("Element Data", oSheets.getCount())
+    End If
+    oSheet2 = oSheets.getByName("Element Data")
+    
+    ' Setting headers for the new sheet
+    oSheet2.getCellByPosition(0,0).setString("profile_code")
+    oSheet2.getCellByPosition(1,0).setString("element_code")
+    oSheet2.getCellByPosition(2,0).setString("type")
+    oSheet2.getCellByPosition(3,0).setString("order_element")
+    oSheet2.getCellByPosition(4,0).setString("upper_depth")
+    oSheet2.getCellByPosition(5,0).setString("lower_depth")
+    oSheet2.getCellByPosition(6,0).setString("specimen_code")
+        
+    j = 1 
+    ' Initialize global counter for element_code
+    elementCounter = 1 
+    ' Initialize order_element
+    Dim orderElement as Integer
+    
+    ' Loop through each row in the original data sheet
+    For i = 1 To oSheet1.RangeAddress.EndRow ' Assuming data starts at row 1
+        oCell = oSheet1.getCellByPosition(3, i) ' Column I (profile_code), 8 is index for column D
+        n = oSheet1.getCellByPosition(5, i).getValue() ' Column D (n_layers), 5 is index for column F
+        
+        ' Check if the profile code has changed, if so reset the order_element
+        If currentProfileCode <> oCell.getString() Then
+            currentProfileCode = oCell.getString()
+            orderElement = 1 ' Reset order_element for each new profile code
+        End If
+        
+        ' Fill in the rows based on the number of layers
+        Do While n > 0
+            ' Set profile_code
+            oSheet2.getCellByPosition(0, j).setString(currentProfileCode)
+            ' Set element_code with profile_code and the order_element
+            oSheet2.getCellByPosition(1, j).setString(currentProfileCode & "_" & orderElement)
+            ' Placeholder for the 'type' column - to be set with Data Validation later
+            oSheet2.getCellByPosition(2, j).setString("Layer/Horizon")
+            ' Set order_element
+            oSheet2.getCellByPosition(3, j).setValue(orderElement)
+            ' Set specimen_code by concatenating profile_code and the order_element
+            oSheet2.getCellByPosition(6, j).setString(currentProfileCode & "_" & orderElement)
+            
+            ' Increment counters and move to next row
+            j = j + 1
+            n = n - 1
+            orderElement = orderElement + 1
+            elementCounter = elementCounter + 1
+        Loop
+        
+        ' Do not reset elementCounter here, it must be unique across the whole sheet
+    Next
+End Sub
