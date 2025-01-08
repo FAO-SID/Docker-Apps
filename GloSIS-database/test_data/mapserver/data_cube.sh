@@ -113,7 +113,7 @@ cp  ./tmp/*_step4.tif ./COG/
 cd COG
 for FILE in ./*;
 do
-    NEWNAME="${FILE//step4/}"
+    NEWNAME="${FILE//_step4/}"
     mv "$FILE" "$NEWNAME"
 done
 
