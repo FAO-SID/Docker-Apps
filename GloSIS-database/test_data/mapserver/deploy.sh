@@ -51,9 +51,8 @@ http://localhost:8082/?map=/etc/mapserver/GSOC.map&SERVICE=WMS&VERSION=1.3.0&REQ
 http://localhost:8082/?map=/etc/mapserver/GSOC.map&SERVICE=WMS&VERSION=1.1.1&LAYER=GSOC&REQUEST=getlegendgraphic&FORMAT=image/png
 # GetFeatureInfo
 http://localhost:8082/?map=/etc/mapserver/GSOC.map&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&BBOX=537861,6757475,734631,6932972&CRS=EPSG:3857&WIDTH=1073&HEIGHT=957&LAYERS=GSOC&STYLES=default&FORMAT=image/png&QUERY_LAYERS=GSOC&INFO_FORMAT=text/html&I=389&J=589
-
 # QGIS add WMS layer
-http://localhost:8082/?map=/etc/mapserver/GSOC.map&SERVICE=WMS
+http://localhost:8082/?map=/etc/mapserver/GSOC.map
 
 
 
