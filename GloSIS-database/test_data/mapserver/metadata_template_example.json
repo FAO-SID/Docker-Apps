@@ -1,0 +1,117 @@
+{
+  "metadataStandardVersion": "1.0",
+  "referenceSystemIdentifier": "EPSG:4326 - WGS84",
+  "language": "eng",
+  "characterSet": "utf8",
+  "spatialRepresentationInfo": {
+    "gridSpatialRepresentation": [
+      {
+        "numberOfDimensions": "2",
+        "dimension": [
+          {
+            "dimensionName": "row",
+            "dimensionSize": "16530",
+            "resolution": {
+              "value": "-0.008333333299879007",
+              "uom": "degree"
+            }
+          },
+          {
+            "dimensionName": "column",
+            "dimensionSize": "43112",
+            "resolution": {
+              "value": "0.008333333299967527",
+              "uom": "degree"
+            }
+          }
+        ],
+        "transformationParameterAvailability": false
+      }
+    ]
+  },
+  "dataIdentification": {
+    "status": "onGoing",
+    "characterSet": "utf8",
+    "spatialRepresentationType": [
+      "grid"
+    ],
+    "language": "eng",
+    "abstract": "GSOCseq - SOC Stocks Uncertainties\n\nThe Initial SOC stocks (stocks at time 0, t0) and the final SOC stocks under the BAU and three SSM scenarios are accompanied by three uncertainty maps. Uncertainties in GSOCseq v1.1 represent the forward propagation of plausible uncertainty ranges of input layers (see the Technical Report, Section 5.6). These uncertainties do not include the model structural uncertainties. The uncertainties maps of the SOC stocks include the following products:\n\nT0: uncertainty of initial SOC stocks (stocks at time 0; T0).The uncertainties (in percent) in the estimate of initial soil organic carbon stocks in 2020, due to the uncertainties of the input layers.\n\nBAU: uncertainty of final SOC stocks under business as usual scenario. The uncertainties (in percent) in the estimate of the projected soil organic carbon stocks after 20 years of business as usual (BAU) management, due to the uncertainties of the input layers.\n\nSSM: uncertainty of final SOC stocks under sustainable soil management scenarios This map represents the uncertainties (in percent) in the estimate of the projected soil organic carbon stocks after 20 years of sustainable soil management practices, due to the uncertainties of the input layers",
+    "citation": {
+      "dates": [
+        {
+          "date": "2025-01-07",
+          "dateType": "publication"
+        }
+      ],
+      "title": "GSOCseq - Soil organic carbon stocks uncertainties (Global - 1 km)",
+      "edition": "Version 2.0",
+      "otherCitationDetails": ""
+    },
+    "supplementalInformation": "No data value: -999\n\nUnit : %\n\nScale Factor : 1.0\n\nMap code : SOCS-U",
+    "descriptiveKeywords": [
+      {
+        "keywords": [
+          "GSOCSEQ",
+          "SOCS-U"
+        ],
+        "type": "theme"
+      }
+    ],
+    "resourceConstraints": {
+      "legalConstraints": {
+        "otherConstraints": [
+          "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        ],
+        "accessConstraints": [
+          "copyright"
+        ],
+        "useConstraints": [
+          "license"
+        ]
+      }
+    },
+    "extent": [
+      {
+        "geographic": {
+          "bbox": {
+            "west": "-179.26666667",
+            "east": "179.9999985582",
+            "north": "82.007747918",
+            "south": "-55.74225152899999"
+          }
+        }
+      }
+    ],
+    "spatialResolution": [
+      {
+        "distance": "0.008333333299967527",
+        "scaleDenominator": "",
+        "unit": "degree"
+      }
+    ],
+    "topicCategory": [
+      "geoscientificInformation",
+      "climatologyMeteorologyAtmosphere",
+      "environment",
+      "farming"
+    ],
+    "resourceMaintenance": {
+      "maintenanceAndUpdateFrequency": "asNeeded"
+    }
+  },
+  "dataQualityInfo": {
+    "lineage": {
+      "statement": ""
+    },
+    "scope": "series"
+  },
+  "distributionFormat": [
+    {
+      "version": "Float32",
+      "name": "TIF"
+    }
+  ],
+  "fileIdentifier": "a17a61ad-a322-41c4-a2f3-39b4fb7eca3c",
+  "metadataStandardName": "ISO 19115:2003/19139"
+}
